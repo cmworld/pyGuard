@@ -15,13 +15,10 @@ from libs.rdsconnect import RdsConn,rds
 
 from jober import Worker
 
-nodeTree = None
-
 class Guard(object):
-    def __init__(self,conf,rds,nodeTree):
+    def __init__(self,conf,rds):
         self.conf = conf
         self.rds = rds
-        self.nodeTree = nodeTree
         self.workers = {}
 
     def run(self):
